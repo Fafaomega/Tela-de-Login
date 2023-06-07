@@ -1,0 +1,268 @@
+:root {
+    --backgroud-color: #cdb6dd;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--backgroud-color);
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 26, 58);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(#09ecfc, #FF1493);
+    animation: animate 4s linear infinite;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: var(--backgroud-color);
+    border-radius: 6px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#box {
+    z-index: 10;
+    background-color: rgb(28, 26, 58);
+    border-radius: 6px;
+    height: 99%;
+    width: 98%;
+    color: white;
+    padding: 10px;
+}
+
+#box h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#box label {
+    font-size: 18px;
+}
+
+#usuario {
+    text-indent: 2px;
+    font-size: 17;
+    width: 200px;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    border: none;
+    border-radius: 5px;
+}
+
+#senha {
+    text-indent: 2px;
+    text-transform: capitalize;
+    font-size: 15px;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 7px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#lembrar-senha {
+    margin-left: 70px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    margin-bottom: 15px;
+    margin-left: 80px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #FF1493;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+}
+
+.login:hover {
+    transform: scale(1.2);
+    background-color: #d1167a;
+}
+
+.conta-nova {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    width: 100px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #09ecfc;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.conta-nova:hover {
+    transform: scale(1.2);
+    background-color: #0dbecb;
+    color: white;
+}
+
+.esqueceu {
+    font-size: 15px;
+    color: white;
+    margin-left: 70px;
+}
+
+.esqueceu:hover {
+    color: #c11010;
+}
+
+/* configurando imagens */
+.facebook {
+    border-radius: 10px;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 45px;
+    cursor: pointer;
+}
+
+.image-container-facebook {
+    position: relative;
+    display: block;
+}
+
+.image-caption {
+    text-align: center;
+    opacity: 0;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 55px;
+    width: 80%;
+    height: 70%;
+    background-color: rgb(30, 54, 113);
+    color: #fff;
+    padding: 10px;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+}
+
+.image-caption a {
+    text-decoration: none;
+    color: white;
+}
+
+.image-container-facebook:hover .image-caption {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.instagram {
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 47px;
+    cursor: pointer;
+}
+
+.image-container-instagram {
+    position: relative;
+    display: block;
+}
+
+.image-caption-instagram {
+    text-align: center;
+    opacity: 0;
+    border-radius: 10px;
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    margin-top: -50px;
+    margin-left: 55px;
+    background-color: rgb(219, 14, 184);
+    color: #fff;
+    padding: 10px;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+}
+
+.image-caption-instagram a {
+    text-decoration: none;
+    color: white;
+}
+
+.image-container-instagram:hover .image-caption-instagram {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.gmail {
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 47px;
+    cursor: pointer;
+}
+
+.image-container-gmail {
+    position: relative;
+    display: block;
+}
+
+.imagem-caption-gmail {
+    text-align: center;
+    opacity: 0;
+    border-radius: 10px;
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    margin-top: -50px;
+    margin-left: 55px;
+    background-color: #dc4a38;
+    color: #fff;
+    padding: 10px;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+}
+
+.imagem-caption-gmail a {
+    text-decoration: none;
+    color: white;
+}
+
+.image-container-gmail:hover .imagem-caption-gmail {
+    transform: translateX(0%);
+    opacity: 1;
+}
